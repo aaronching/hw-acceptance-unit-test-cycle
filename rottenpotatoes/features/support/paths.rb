@@ -22,6 +22,9 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
     
+    when /^the RottenPotatoes home page/
+      '/movies'
+    
     when /^the edit page for (.*)/
       # Strip the quotes from $1
       edit_movie_path(Movie.find_by_title($1.gsub(/\A"+(.*?)"+\Z/m, '\1')))

@@ -16,11 +16,12 @@ describe MoviesController, type: :controller do
     context 'when movie has no director' do
         it 'renders index page' do
             movie_1 = Movie.create(:title => "Harambe")
-            
+            expect(movie_1.new_record?).to eq(false)
             get :samedirector, :id => movie_1
             
             expect(response).to redirect_to('/movies')
             expect(flash[:notice]).to eq("\'Harambe\' has no director info")
         end
+        
     end
 end

@@ -18,4 +18,16 @@ describe Movie, '.movies_with_same_director' do
         
         expect(result).not_to include("Batman")
     end
+
 end
+
+# describe Movie, '.destroy' do
+#     it 'destroys a model properly' do
+#         movie_1 = Movie.create(:title => "Totoro", :director => "Isaac Zhang")
+#         movie_1.destroy
+
+#         expect(movie_1.destroyed?).to eq(true)
+#     end
+
+
+# end
